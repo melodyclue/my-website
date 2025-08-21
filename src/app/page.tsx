@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -71,7 +73,7 @@ export default function Home() {
         <section className="mb-20">
           <h2 className="text-2xl font-bold mb-8 text-black">More</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <a
+            <Link
               href="/projects"
               className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-sm transition-all group"
             >
@@ -86,7 +88,7 @@ export default function Home() {
               <div className="mt-4 text-sm text-gray-500 font-mono">
                 3 projects →
               </div>
-            </a>
+            </Link>
 
             <div className="block p-6 border border-gray-200 rounded-lg opacity-50 cursor-not-allowed">
               <div className="mb-3">
