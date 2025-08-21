@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Projects() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -95,12 +97,12 @@ export default function Projects() {
 
         {/* Back to Home */}
         <div className="mt-16 text-center">
-          <a
+          <Link
             href="/"
             className="text-gray-600 hover:text-gray-900 transition-colors font-medium underline"
           >
             ← ホームに戻る
-          </a>
+          </Link>
         </div>
       </div>
     </div>
