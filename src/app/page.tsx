@@ -9,15 +9,26 @@ export default function Home() {
 			<div className="max-w-3xl mx-auto px-6 py-20">
 				{/* Header */}
 				<header className="mb-20">
-					<h1 className="text-4xl font-bold mb-3 text-black">Reo Yamashita</h1>
-					<p className="text-lg text-gray-600 mb-8">
-						Freelance Frontend Developer
-					</p>
+					<div className="flex items-center gap-4 mb-6">
+						<div className="w-20 h-20 rounded-full overflow-hidden">
+							<Image
+								src="/reo.png"
+								alt="Reo Yamashita"
+								width={100}
+								height={100}
+								className="object-cover"
+							/>
+						</div>
+						<div className="flex flex-col gap-1">
+							<h1 className="text-2xl font-bold text-black">Reo Yamashita</h1>
+							<p className="text-sm text-gray-600">Frontend Developer</p>
+						</div>
+					</div>
 					<div className="text-gray-700 leading-relaxed mb-10 space-y-4">
 						<p>
 							フリーランスのフロントエンドエンジニアとして、TypeScriptを使った中規模アプリケーションの開発を承っています。
 						</p>
-						<ul className="space-y-2 text-sm">
+						<ul className="space-y-2 text-sm py-3">
 							<li>• レガシー環境からモダンなフレームワークへのリプレイス</li>
 							<li>• 型安全なフルスタックでのサービス開発</li>
 							<li>• Stripe や Square を用いた決済システムの構築</li>

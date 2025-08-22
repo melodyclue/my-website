@@ -12,13 +12,13 @@ export const ContactButton = () => {
 	return (
 		<Link
 			href="https://cal.com/melodylcue/meeting"
-			className="inline-flex items-center gap-2 px-6 py-2 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+			className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-800 text-white rounded-full font-medium hover:bg-gray-900 transition-colors shadow-sm"
 			target="_blank"
 			rel="noopener noreferrer"
 			onClick={handleClick}
 		>
 			<Calendar size={16} />
-			無料相談を予約する
+			無料相談を予約
 		</Link>
 	);
 };
