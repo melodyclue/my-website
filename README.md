@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Google Analytics
+
+https://analytics.google.com/analytics/web/?hl=ja#/p502217069/reports/intelligenthome?params=_u..nav%3Dmaui
+
 ## Getting Started
 
 First, run the development server:
