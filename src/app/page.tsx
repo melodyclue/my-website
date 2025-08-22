@@ -37,7 +37,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-6">
             <a
               href="https://github.com/melodyclue"
-              className="text-gray-600 hover:text-gray-900 transition-colors underline"
+              className="px-3 py-1 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-800 transition-colors rounded-md font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -45,7 +45,7 @@ export default function Home() {
             </a>
             <a
               href="https://twitter.com/melodyclue"
-              className="text-gray-600 hover:text-gray-900 transition-colors underline"
+              className="px-3 py-1 bg-sky-50 text-sky-700 hover:bg-sky-100 hover:text-sky-800 transition-colors rounded-md font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -53,7 +53,7 @@ export default function Home() {
             </a>
             <a
               href="https://zenn.dev/melodyrouter"
-              className="text-gray-600 hover:text-gray-900 transition-colors underline"
+              className="px-3 py-1 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors rounded-md font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -61,7 +61,7 @@ export default function Home() {
             </a>
             <a
               href="mailto:hello@melody.dev"
-              className="text-gray-600 hover:text-gray-900 transition-colors underline"
+              className="px-3 py-1 bg-amber-50 text-amber-700 hover:bg-amber-100 hover:text-amber-800 transition-colors rounded-md font-medium"
             >
               Email
             </a>
@@ -110,15 +110,15 @@ export default function Home() {
         {/* Skills */}
         <section className="mb-20">
           <h2 className="text-2xl font-bold mb-8 text-black">Skills</h2>
-          <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">React</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">Next.js</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">TypeScript</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">JavaScript</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">Tailwind CSS</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">WordPress</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">Shopify</span>
-            <span className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full font-medium">Stripe</span>
+          <div className="flex flex-wrap gap-2">
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">React</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">Next.js</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">TypeScript</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">JavaScript</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">Tailwind CSS</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">WordPress</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">Shopify</span>
+            <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">Stripe</span>
           </div>
         </section>
 
