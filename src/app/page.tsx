@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Github as GitHubIcon, Twitter as TwitterIcon, Mail, Calendar, FolderOpen, Book } from "lucide-react";
 
 export default function Home() {
   return (
@@ -26,10 +27,11 @@ export default function Home() {
               </p>
               <a
                 href="https://cal.com/melodylcue/meeting"
-                className="inline-block px-6 py-2 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-2 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <Calendar size={16} />
                 無料相談を予約する
               </a>
             </div>
@@ -37,32 +39,36 @@ export default function Home() {
           <div className="flex flex-wrap gap-6">
             <a
               href="https://github.com/melodyclue"
-              className="px-3 py-1 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-800 transition-colors rounded-md font-medium"
+              className="flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-800 transition-colors rounded-md font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <GitHubIcon size={16} />
               GitHub
             </a>
             <a
               href="https://twitter.com/melodyclue"
-              className="px-3 py-1 bg-sky-50 text-sky-700 hover:bg-sky-100 hover:text-sky-800 transition-colors rounded-md font-medium"
+              className="flex items-center gap-2 px-3 py-1 bg-sky-50 text-sky-700 hover:bg-sky-100 hover:text-sky-800 transition-colors rounded-md font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <TwitterIcon size={16} />
               Twitter
             </a>
             <a
               href="https://zenn.dev/melodyrouter"
-              className="px-3 py-1 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors rounded-md font-medium"
+              className="flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors rounded-md font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <Book size={16} />
               Zenn
             </a>
             <a
               href="mailto:hello@melody.dev"
-              className="px-3 py-1 bg-amber-50 text-amber-700 hover:bg-amber-100 hover:text-amber-800 transition-colors rounded-md font-medium"
+              className="flex items-center gap-2 px-3 py-1 bg-amber-50 text-amber-700 hover:bg-amber-100 hover:text-amber-800 transition-colors rounded-md font-medium"
             >
+              <Mail size={16} />
               Email
             </a>
           </div>
@@ -77,7 +83,8 @@ export default function Home() {
               href="/projects"
               className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-sm transition-all group"
             >
-              <div className="mb-3">
+              <div className="mb-3 flex items-center gap-2">
+                <FolderOpen size={20} className="text-gray-600 group-hover:text-gray-700 transition-colors" />
                 <h3 className="text-xl font-semibold text-black group-hover:text-gray-700 transition-colors">
                   プロジェクト
                 </h3>
