@@ -10,13 +10,22 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: "Reo Yamashita - Freelance Frontend Developer",
-	description: "フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
-	keywords: ["フロントエンドエンジニア", "TypeScript", "React", "Next.js", "フリーランス", "Webアプリケーション開発"],
+	description:
+		"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
+	keywords: [
+		"フロントエンドエンジニア",
+		"TypeScript",
+		"React",
+		"Next.js",
+		"フリーランス",
+		"Webアプリケーション開発",
+	],
 	authors: [{ name: "Reo Yamashita" }],
 	creator: "Reo Yamashita",
 	openGraph: {
 		title: "Reo Yamashita - Freelance Frontend Developer",
-		description: "フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
+		description:
+			"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 		url: "https://melody.dev",
 		siteName: "Reo Yamashita",
 		locale: "ja_JP",
@@ -25,7 +34,8 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary",
 		title: "Reo Yamashita - Freelance Frontend Developer",
-		description: "フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
+		description:
+			"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 		creator: "@melodyclue",
 	},
 	robots: {
@@ -44,7 +54,7 @@ export default function RootLayout({
 			<head>
 				<GoogleAnalytics gaId="G-B4HJMDNC9E" />
 			</head>
-			<body className={`${inter.variable} antialiased`}>{children}</body>
+			<body className={`${inter.variable}`}>{children}</body>
 		</html>
 	);
 }

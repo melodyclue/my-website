@@ -24,7 +24,7 @@ export default function Home() {
 							<p className="text-sm text-gray-600">Frontend Developer</p>
 						</div>
 					</div>
-					<div className="text-gray-700 leading-relaxed mb-10 space-y-4">
+					<div className="text-zinc-700 leading-relaxed mb-10 space-y-4">
 						<p>
 							フリーランスのフロントエンドエンジニアとして、TypeScriptを使った中規模アプリケーションの開発を承っています。
 						</p>
@@ -35,7 +35,7 @@ export default function Home() {
 							<li>• 短期間でのMVP開発とプロトタイピング</li>
 						</ul>
 						<div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-							<p className="text-sm text-gray-700 mb-3">
+							<p className="text-sm text-zinc-700 mb-3">
 								ご相談は無料です。お気軽にお問い合わせください。
 							</p>
 							<ContactButton />
@@ -90,9 +90,9 @@ export default function Home() {
 							<div className="mb-3 flex items-center gap-2">
 								<FolderOpen
 									size={20}
-									className="text-gray-600 group-hover:text-gray-700 transition-colors"
+									className="text-gray-600 group-hover:text-zinc-700 transition-colors"
 								/>
-								<h3 className="text-xl font-semibold text-black group-hover:text-gray-700 transition-colors">
+								<h3 className="text-xl font-semibold text-black group-hover:text-zinc-700 transition-colors">
 									プロジェクト
 								</h3>
 							</div>
@@ -124,28 +124,28 @@ export default function Home() {
 				<section className="mb-20">
 					<h2 className="text-2xl font-bold mb-8 text-black">Skills</h2>
 					<div className="flex flex-wrap gap-2">
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							React
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							Next.js
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							TypeScript
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							JavaScript
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							Tailwind CSS
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							WordPress
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							Shopify
 						</span>
-						<span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm">
+						<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm">
 							Stripe
 						</span>
 					</div>
