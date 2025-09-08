@@ -1,4 +1,4 @@
-import { Book, FolderOpen, Mail } from "lucide-react";
+import { Book, FileText, FolderOpen, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactButton } from "./ContactButton";
@@ -75,6 +75,15 @@ export default function Home() {
 						>
 							<Mail size={16} />
 							Email
+						</a>
+						<a
+							href="/api/skill-sheet-pdf"
+							className="flex items-center gap-2 px-4 py-1.5 md:px-3 md:py-1 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 hover:text-indigo-800 transition-colors rounded-md font-medium"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<FileText size={16} />
+							技術経歴書
 						</a>
 					</div>
 				</header>
