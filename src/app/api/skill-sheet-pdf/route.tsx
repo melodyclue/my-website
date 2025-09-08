@@ -10,17 +10,17 @@ import {
 	View,
 } from "@react-pdf/renderer";
 
-const dir = path.resolve("./public", "fonts");
+const dir = path.join(process.cwd(), "public", "fonts");
 
 Font.register({
 	family: "NotoSansJP",
 	fonts: [
 		{
-			src: `${dir}/NotoSansJP-Regular.ttf`,
+			src: path.join(dir, "NotoSansJP-Regular.ttf"),
 			fontWeight: 400,
 		},
 		{
-			src: `${dir}/NotoSansJP-Medium.ttf`,
+			src: path.join(dir, "NotoSansJP-Medium.ttf"),
 			fontWeight: 500,
 		},
 	],
