@@ -26,7 +26,7 @@ export default function Home() {
 					</div>
 					<div className="text-zinc-700 leading-relaxed mb-10 space-y-4">
 						<p>
-							フリーランスのフロントエンドエンジニアとして、TypeScriptを使った中規模アプリケーションの開発を承っています。
+							フロントエンドエンジニアとして、TypeScriptを使った中規模アプリケーションの開発を承っています。
 						</p>
 						<ul className="space-y-2 text-sm py-3">
 							<li>• レガシー環境からモダンなフレームワークへのリプレイス</li>

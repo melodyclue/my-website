@@ -11,13 +11,13 @@ const inter = Inter({
 export const metadata: Metadata = {
 	title: "Reo Yamashita - Freelance Frontend Developer",
 	description:
-		"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
+		"フロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 	keywords: [
 		"フロントエンドエンジニア",
 		"TypeScript",
 		"React",
 		"Next.js",
-		"フリーランス",
+		// "フリーランス",
 		"Webアプリケーション開発",
 	],
 	authors: [{ name: "Reo Yamashita" }],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Reo Yamashita - Freelance Frontend Developer",
 		description:
-			"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
+			"フロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 		url: "https://melodyclue.vercel.app/",
 		siteName: "Reo Yamashita",
 		locale: "ja_JP",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 		card: "summary",
 		title: "Reo Yamashita - Freelance Frontend Developer",
 		description:
-			"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
+			"フロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 		creator: "@melodyclue",
 	},
 	robots: {
