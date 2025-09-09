@@ -70,7 +70,7 @@ export default function Home() {
 							Zenn
 						</a>
 						<a
-							href="mailto:hello@melody.dev"
+							href="mailto:melody.router@gmail.com"
 							className="flex items-center gap-2 px-4 py-1.5 md:px-3 md:py-1 bg-amber-50 text-amber-700 hover:bg-amber-100 hover:text-amber-800 transition-colors rounded-md font-medium"
 						>
 							<Mail size={16} />

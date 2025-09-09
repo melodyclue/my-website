@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		title: "Reo Yamashita - Freelance Frontend Developer",
 		description:
 			"フリーランスのフロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
-		url: "https://melody.dev",
+		url: "https://melodyclue.vercel.app/",
 		siteName: "Reo Yamashita",
 		locale: "ja_JP",
 		type: "website",
