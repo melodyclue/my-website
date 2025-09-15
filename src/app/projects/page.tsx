@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Projects() {
 	return (
-		<div className="min-h-screen bg-white text-gray-900">
+		<div className="min-h-screen">
 			<div className="max-w-3xl mx-auto px-6 py-20">
 				{/* Header */}
 				<header className="mb-12">
@@ -44,9 +44,6 @@ export default function Projects() {
 							</span>
 							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
 								Vercel
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								PlanetScale
 							</span>
 							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
 								Stripe

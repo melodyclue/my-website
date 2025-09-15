@@ -12,7 +12,7 @@ export const ContactButton = () => {
 	return (
 		<Link
 			href="https://cal.com/melodylcue/meeting"
-			className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-800 text-white rounded-full font-medium hover:bg-gray-900 transition-colors shadow-sm"
+			className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-white rounded-full font-medium  transition-colors text-sm"
 			target="_blank"
 			rel="noopener noreferrer"
 			onClick={handleClick}

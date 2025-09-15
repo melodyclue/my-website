@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 		"TypeScript",
 		"React",
 		"Next.js",
-		// "フリーランス",
 		"Webアプリケーション開発",
 	],
 	authors: [{ name: "Reo Yamashita" }],
@@ -54,7 +53,11 @@ export default function RootLayout({
 			<head>
 				<GoogleAnalytics gaId="G-B4HJMDNC9E" />
 			</head>
-			<body className={`${inter.variable}`}>{children}</body>
+			<body
+				className={`${inter.variable} font-sans bg-background text-foreground`}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }
