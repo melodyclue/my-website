@@ -1,8 +1,8 @@
 import { allPosts } from "content-collections";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { createExcerpt, formatPostDate } from "@/utils/postFormatting";
 import Breadcrumb from "@/components/Breadcrumb";
+import { formatPostDate } from "@/utils/postFormatting";
 
 export default function Posts() {
 	const posts = allPosts
@@ -53,7 +53,6 @@ export default function Posts() {
 					<section className="space-y-6">
 						{annotatedPosts.map((entry) => {
 							const { post, publishedAt, updatedAt, showUpdated } = entry;
-							const excerpt = createExcerpt(post.content, 150);
 
 							return (
 								<Link

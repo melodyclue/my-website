@@ -1,11 +1,10 @@
-import { ArrowLeft, CalendarDays, Clock, RefreshCcw } from "lucide-react";
+import parse from "html-react-parser";
+import { Calendar, HelpCircle, RotateCcw } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
-import MarkdownContent from "@/components/MarkdownContent";
 import { getPost } from "@/utils/getPost";
-import { createExcerpt, formatPostDate } from "@/utils/postFormatting";
+import { formatPostDate } from "@/utils/postFormatting";
 
 type PostPageProps = {
 	params: Promise<{ slug: string }>;
@@ -20,11 +19,8 @@ export async function generateMetadata({
 		return {};
 	}
 
-	const description = createExcerpt(post.content, 160);
-
 	return {
 		title: `${post.title} | Blog`,
-		description,
 	};
 }
 
@@ -39,7 +35,6 @@ export default async function PostPage({ params }: PostPageProps) {
 	const publishedAt = formatPostDate(post.publishedAt);
 	const updatedAt = formatPostDate(post.updatedAt);
 	const showUpdated = Boolean(updatedAt) && post.updatedAt !== post.publishedAt;
-	const lead = createExcerpt(post.content, 220);
 
 	return (
 		<div className="min-h-screen bg-background">
@@ -55,34 +50,63 @@ export default async function PostPage({ params }: PostPageProps) {
 						<h1 className="text-2xl font-bold text-black md:text-3xl">
 							{post.title}
 						</h1>
-						{lead && (
-							<p className="text-base leading-relaxed text-zinc-700">{lead}</p>
-						)}
-						<div className="grid gap-4 bg-zinc-50 rounded-xl p-6 text-sm text-zinc-700 md:grid-cols-3">
+						<div className="flex flex-wrap items-center gap-6 bg-zinc-50/70 rounded-lg p-4 text-sm">
 							{publishedAt && (
-								<div className="flex flex-col gap-1">
-									<span className="text-xs text-zinc-500">公開日</span>
-									<span className="font-semibold text-zinc-900">
+								<div className="flex items-center gap-2">
+									<Calendar className="w-4 h-4 text-zinc-500" />
+									<span className="text-zinc-500 text-xs">公開</span>
+									<time className="text-zinc-700 font-medium">
 										{publishedAt}
-									</span>
+									</time>
 								</div>
 							)}
 							{showUpdated && (
-								<div className="flex flex-col gap-1">
-									<span className="text-xs text-zinc-500">最終更新</span>
-									<span className="font-semibold text-zinc-900">
-										{updatedAt}
-									</span>
+								<div className="flex items-center gap-2">
+									<RotateCcw className="w-4 h-4 text-zinc-500" />
+									<span className="text-zinc-500 text-xs">更新</span>
+									<time className="text-zinc-700 font-medium">{updatedAt}</time>
 								</div>
 							)}
 						</div>
 					</header>
 					<div className="flex flex-col gap-12">
-						<MarkdownContent content={post.content} />
-						<footer className="bg-zinc-50 rounded-xl p-6 text-sm text-zinc-700">
-							<p className="font-medium">
-								この記事で扱ってほしいトピックや質問があれば、次の記事づくりのヒントにしたいのでぜひお知らせください。
-							</p>
+						<div
+							className="prose text-foreground
+							[&_code:not(pre_code)]:before:content-none [&_code:not(pre_code)]:after:content-none
+							[&_code:not(pre_code)]:bg-slate-100 [&_code:not(pre_code)]:px-1.5 [&_code:not(pre_code)]:py-0.5
+							[&_code:not(pre_code)]:rounded [&_code:not(pre_code)]:text-sm [&_code:not(pre_code)]:text-rose-600
+							[&_code:not(pre_code)]:font-medium"
+						>
+							{parse(post.html)}
+						</div>
+						<footer className="bg-zinc-50/50 rounded-lg p-6 border border-zinc-200/50">
+							<div className="flex flex-col gap-4">
+								<div className="flex items-center gap-3">
+									<div className="w-6 h-6 bg-zinc-100 rounded-full flex items-center justify-center">
+										<HelpCircle className="w-3 h-3 text-zinc-500" />
+									</div>
+									<h3 className="text-sm font-medium text-zinc-700">
+										フィードバック
+									</h3>
+								</div>
+								<p className="text-zinc-600 text-sm leading-relaxed">
+									この記事についてのご質問や、今後取り上げてほしいトピックがありましたら、
+									<a
+										href="https://twitter.com/melodyclue"
+										className="text-zinc-700 hover:text-zinc-900 underline mx-1"
+									>
+										Twitter
+									</a>
+									や
+									<a
+										href="mailto:melody.router@gmail.com"
+										className="text-zinc-700 hover:text-zinc-900 underline mx-1"
+									>
+										メール
+									</a>
+									でお気軽にお知らせください。皆さんの声が次の記事づくりの大きなヒントになります。
+								</p>
+							</div>
 						</footer>
 					</div>
 				</article>
