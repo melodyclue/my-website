@@ -2,17 +2,20 @@ import { ArrowLeft, CalendarDays, Clock, RefreshCcw } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import MarkdownContent from "@/components/MarkdownContent";
 import Breadcrumb from "@/components/Breadcrumb";
+import MarkdownContent from "@/components/MarkdownContent";
 import { getPost } from "@/utils/getPost";
 import { createExcerpt, formatPostDate } from "@/utils/postFormatting";
 
 type PostPageProps = {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 };
 
-export function generateMetadata({ params }: PostPageProps): Metadata {
-	const post = getPost(params.slug);
+export async function generateMetadata({
+	params,
+}: PostPageProps): Promise<Metadata> {
+	const { slug } = await params;
+	const post = getPost(slug);
 	if (!post) {
 		return {};
 	}
@@ -25,8 +28,8 @@ export function generateMetadata({ params }: PostPageProps): Metadata {
 	};
 }
 
-export default function PostPage({ params }: PostPageProps) {
-	const { slug } = params;
+export default async function PostPage({ params }: PostPageProps) {
+	const { slug } = await params;
 	const post = getPost(slug);
 
 	if (!post) {
@@ -44,7 +47,7 @@ export default function PostPage({ params }: PostPageProps) {
 				<Breadcrumb
 					items={[
 						{ label: "Home", href: "/" },
-						{ label: "Blog", href: "/posts" }
+						{ label: "Blog", href: "/posts" },
 					]}
 				/>
 				<article className="bg-white/60 backdrop-blur-sm border border-zinc-200/60 rounded-2xl p-8 md:p-12">
