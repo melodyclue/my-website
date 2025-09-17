@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Reo Yamashita - Freelance Frontend Developer",
+	title: "Reo Yamashita - Frontend Developer",
 	description:
 		"フロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 	keywords: [
@@ -18,21 +18,22 @@ export const metadata: Metadata = {
 		"React",
 		"Next.js",
 		"Webアプリケーション開発",
+		"フリーランス",
 	],
 	authors: [{ name: "Reo Yamashita" }],
 	creator: "Reo Yamashita",
 	openGraph: {
-		title: "Reo Yamashita - Freelance Frontend Developer",
+		title: "Reo Yamashita - Frontend Developer",
 		description:
 			"フロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
-		url: "https://melodyclue.vercel.app/",
+		url: "https://melodyclue.com",
 		siteName: "Reo Yamashita",
 		locale: "ja_JP",
 		type: "website",
 	},
 	twitter: {
 		card: "summary",
-		title: "Reo Yamashita - Freelance Frontend Developer",
+		title: "Reo Yamashita - Frontend Developer",
 		description:
 			"フロントエンドエンジニア。TypeScriptを使った中規模アプリケーション開発、レガシー環境のモダン化、決済システム構築まで対応。",
 		creator: "@melodyclue",

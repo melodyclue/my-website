@@ -111,16 +111,16 @@ export default function Home() {
 					<div className="grid md:grid-cols-2 gap-8">
 						<Link
 							href="/projects"
-							className="group block p-8 bg-white/60 backdrop-blur-sm border border-zinc-200/60 rounded-2xl hover:border-zinc-300/80 hover:-translate-y-1 transition-all duration-300"
+							className="group block p-8 bg-white/60 backdrop-blur-sm border border-zinc-200/60 rounded-2xl hover:bg-white/80 hover:border-zinc-300/80 hover:-translate-y-1 transition-all duration-300"
 						>
 							<div className="mb-4 flex items-center gap-3">
-								<div className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">
+								<div className="p-2 bg-zinc-100 rounded-lg group-hover:bg-zinc-200 transition-colors">
 									<FolderOpen
 										size={24}
-										className="text-blue-600 group-hover:text-blue-700 transition-colors"
+										className="text-zinc-600 group-hover:text-zinc-700 transition-colors"
 									/>
 								</div>
-								<h3 className="text-xl font-bold text-black group-hover:text-blue-600 transition-colors">
+								<h3 className="text-xl font-bold text-black group-hover:text-zinc-700 transition-colors">
 									プロジェクト
 								</h3>
 							</div>
@@ -131,31 +131,39 @@ export default function Home() {
 								<div className="text-xs text-zinc-500 font-mono bg-zinc-100 px-3 py-1 rounded-full">
 									3 projects
 								</div>
-								<div className="text-blue-600 group-hover:translate-x-2 transition-transform duration-200">
+								<div className="text-zinc-600 group-hover:translate-x-2 transition-transform duration-200">
 									→
 								</div>
 							</div>
 						</Link>
 
-						<div className="group block p-8 bg-gradient-to-br from-zinc-100/80 to-zinc-200/80 backdrop-blur-sm border border-zinc-300/60 rounded-2xl relative overflow-hidden">
-							<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-							<div className="relative">
-								<div className="mb-4 flex items-center gap-3">
-									<div className="p-2 bg-zinc-200 rounded-lg">
-										<FolderOpen size={24} className="text-zinc-500" />
-									</div>
-									<h3 className="text-xl font-bold text-zinc-500">個人開発</h3>
+						<Link
+							href="/personal"
+							className="group block p-8 bg-white/60 backdrop-blur-sm border border-zinc-200/60 rounded-2xl hover:bg-white/80 hover:border-zinc-300/80 hover:-translate-y-1 transition-all duration-300"
+						>
+							<div className="mb-4 flex items-center gap-3">
+								<div className="p-2 bg-zinc-100 rounded-lg group-hover:bg-zinc-200 transition-colors">
+									<FolderOpen
+										size={24}
+										className="text-zinc-600 group-hover:text-zinc-700 transition-colors"
+									/>
 								</div>
-								<p className="text-sm text-zinc-500 leading-relaxed mb-6">
-									個人で開発したWebアプリケーションやツール。技術検証や新しいアイデアの実験的なプロジェクトを紹介しています。
-								</p>
-								<div className="flex items-center justify-between">
-									<div className="text-xs text-zinc-400 font-mono bg-zinc-200 px-3 py-1 rounded-full">
-										Coming soon...
-									</div>
+								<h3 className="text-xl font-bold text-black group-hover:text-zinc-700 transition-colors">
+									個人開発
+								</h3>
+							</div>
+							<p className="text-sm text-foreground leading-relaxed mb-6">
+								個人で開発したWebアプリケーションやツール。技術検証や新しいアイデアの実験的なプロジェクトを紹介しています。
+							</p>
+							<div className="flex items-center justify-between">
+								<div className="text-xs text-zinc-500 font-mono bg-zinc-100 px-3 py-1 rounded-full">
+									1 project
+								</div>
+								<div className="text-zinc-600 group-hover:translate-x-2 transition-transform duration-200">
+									→
 								</div>
 							</div>
-						</div>
+						</Link>
 					</div>
 				</section>
 
