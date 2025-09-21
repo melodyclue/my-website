@@ -4,7 +4,7 @@ export const siteConfig = {
 	pdf: {
 		skillSheet: {
 			title: "職務経歴書",
-			path: "https://assets.melodyclue.com/pdf/melodyclue_skillsheet_2025.pdf",
+			path: "https://assets.melodyclue.com/pdf/skillsheet_2025.pdf",
 		},
 	},
 };
