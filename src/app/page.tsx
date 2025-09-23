@@ -157,7 +157,7 @@ export default function Home() {
 							</p>
 							<div className="flex items-center justify-between">
 								<div className="text-xs text-zinc-500 font-mono bg-zinc-100 px-3 py-1 rounded-full">
-									1 project
+									2 project
 								</div>
 								<div className="text-zinc-600 group-hover:translate-x-2 transition-transform duration-200">
 									→

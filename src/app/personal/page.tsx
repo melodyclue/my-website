@@ -18,6 +18,14 @@ const personalProjects = [
 			"shadcn/ui",
 		],
 	},
+	{
+		title: "react-cliptext",
+		description:
+			"テキストをクリップボードにコピーするためのReactコンポーネントライブラリ。既存のライブラリreact-copy-to-clipboardがReact19に対応していなかったり、テストやバンドラーが古いものだったのでモダンに改良した",
+		url: "https://github.com/melodyclue/react-cliptext",
+		status: "公開中",
+		tech: ["React", "TypeScript", "npm"],
+	},
 ];
 
 export default function PersonalProjects() {
