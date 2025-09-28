@@ -1,4 +1,5 @@
 import { MDXContent } from "@content-collections/mdx/react";
+import { allPosts } from "content-collections";
 import { Calendar, HelpCircle, RotateCcw } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -23,6 +24,12 @@ export async function generateMetadata({
 	return {
 		title: `${post.title} | Blog`,
 	};
+}
+
+export async function generateStaticParams() {
+	return allPosts.map((post) => ({
+		slug: post.slug,
+	}));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
