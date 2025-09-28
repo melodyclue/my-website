@@ -1,8 +1,9 @@
-import parse from "html-react-parser";
+import { MDXContent } from "@content-collections/mdx/react";
 import { Calendar, HelpCircle, RotateCcw } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
+import Callout from "@/components/Callout";
 import { getPost } from "@/utils/getPost";
 import { formatPostDate } from "@/utils/postFormatting";
 
@@ -77,7 +78,20 @@ export default async function PostPage({ params }: PostPageProps) {
 							[&_code:not(pre_code)]:rounded [&_code:not(pre_code)]:text-sm [&_code:not(pre_code)]:text-rose-600
 							[&_code:not(pre_code)]:font-medium"
 						>
-							{parse(post.html)}
+							<MDXContent
+								code={post.mdx}
+								components={{
+									Callout,
+									a: (props) => (
+										<a
+											{...props}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-zinc-700 hover:text-zinc-900 underline mx-1"
+										/>
+									),
+								}}
+							/>
 						</div>
 						<footer className="bg-zinc-50/50 rounded-lg p-6 border border-zinc-200/50">
 							<div className="flex flex-col gap-4">

@@ -1,143 +1,97 @@
+import { allProjects } from "content-collections";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function Projects() {
+	const projects = allProjects.sort((a, b) => a.order - b.order);
+
 	return (
-		<div className="min-h-screen">
-			<div className="max-w-3xl mx-auto px-6 py-20">
-				{/* Header */}
+		<div className="min-h-screen bg-background">
+			<div className="mx-auto max-w-4xl px-6 py-8 md:py-16">
+				<Breadcrumb items={[{ label: "Home", href: "/" }]} />
+
 				<header className="mb-12">
-					<h1 className="text-3xl font-bold mb-4 text-black">Projects</h1>
-					<p className="text-gray-600">
+					<h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">プロジェクト実績</h1>
+					<p className="text-lg text-zinc-600 leading-relaxed">
 						これまでに手がけた主なプロジェクトの詳細です。
 					</p>
 				</header>
 
-				{/* Projects */}
-				<div className="space-y-12">
-					{/* ToB Webサービス */}
-					<div className="pb-8 border-b border-gray-100">
-						<div className="mb-4">
-							<h2 className="text-xl font-semibold text-black">
-								ToB向けWebサービス開発
-							</h2>
-						</div>
-						<p className="text-gray-600 mb-6 leading-relaxed">
-							Webサイト運用保守をワンストップで提供するSaaSの新規開発を担当。システム全体のアーキテクチャ設計から実装まで一貫して対応し、
-							作業時間トラッキングとレポート機能の自動化により、クライアントの報告業務工数をほぼ0まで削減しました。
-						</p>
-						<div className="mb-6">
-							<h3 className="text-lg font-medium mb-3 text-black">主な機能</h3>
-							<ul className="space-y-2 text-sm text-gray-600">
-								<li>• 作業時間の自動トラッキング機能</li>
-								<li>• PDFレポートの自動生成・配信</li>
-								<li>• Stripeを使った決済システム</li>
-								<li>• Ablyを使ったリアルタイム通信</li>
-								<li>• 管理者向けダッシュボード</li>
-							</ul>
-						</div>
-						<div className="flex flex-wrap gap-2 mb-4">
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Next.js
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								TypeScript
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Vercel
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Stripe
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Ably
-							</span>
-						</div>
-						<p className="text-sm text-gray-500 font-mono">
-							技術選定・設計・実装
-						</p>
-					</div>
+				<div className="space-y-8">
+					{projects.map((project) => (
+						<article key={project.slug} className="bg-white/60 backdrop-blur-sm border border-zinc-200/60 rounded-2xl p-8 hover:bg-white/80 hover:border-zinc-300/80 hover:-translate-y-1 transition-all duration-300">
+							<header className="space-y-4 mb-6">
+								<h2 className="text-xl md:text-2xl font-bold text-foreground">
+									{project.title}
+								</h2>
+								<div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm text-zinc-600">
+									<div className="flex items-center gap-2">
+										<span className="font-medium">期間:</span>
+										<span>{project.period}</span>
+									</div>
+									<div className="flex items-center gap-2">
+										<span className="font-medium">役割:</span>
+										<span>{project.role}</span>
+									</div>
+									<div className="flex items-center gap-2">
+										<span className="font-medium">チーム:</span>
+										<span>{project.team}</span>
+									</div>
+								</div>
+							</header>
 
-					{/* ECサイト注文システム */}
-					<div className="pb-8 border-b border-gray-100">
-						<div className="mb-4">
-							<h2 className="text-xl font-semibold text-black">
-								ECサイト注文システム改修
-							</h2>
-						</div>
-						<p className="text-gray-600 mb-6 leading-relaxed">
-							ECサイトの会員機能追加開発を担当。ユーザビリティを重視した設計により注文完了時間を4分から2分に短縮し、
-							帳票業務の完全自動化によってクライアントの運用負荷を大幅に軽減しました。
-						</p>
-						<div className="mb-6">
-							<h3 className="text-lg font-medium mb-3 text-black">改善成果</h3>
-							<ul className="space-y-2 text-sm text-gray-600">
-								<li>• 注文完了時間: 4分 → 2分に短縮</li>
-								<li>• ユーザー登録時間: 約1分で完了</li>
-								<li>• 帳票業務の完全自動化</li>
-								<li>• リピート率の向上</li>
-							</ul>
-						</div>
-						<div className="flex flex-wrap gap-2 mb-4">
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Vue.js
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Square
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								WordPress
-							</span>
-						</div>
-						<p className="text-sm text-gray-500 font-mono">
-							要件定義・設計・実装
-						</p>
-					</div>
+							<p className="text-zinc-700 leading-relaxed mb-6">
+								{project.description}
+							</p>
 
+							<section className="space-y-4 mb-6">
+								<h3 className="text-base font-semibold text-foreground">主な業務内容</h3>
+								<ul className="space-y-2 text-sm text-zinc-700">
+									{project.tasks.map((task) => (
+										<li key={task} className="flex items-start gap-2">
+											<span className="w-1.5 h-1.5 bg-zinc-400 rounded-full mt-2 flex-shrink-0"></span>
+											{task}
+										</li>
+									))}
+								</ul>
+							</section>
 
-					{/* 予約システムリプレイス */}
-					<div className="pb-8">
-						<div className="mb-4">
-							<h2 className="text-xl font-semibold text-black">
-								飲食予約システムリプレイス
-							</h2>
-						</div>
-						<p className="text-gray-600 mb-6 leading-relaxed">
-							レガシーな飲食店予約システムのモダン化を担当。EJSからNuxt.jsへの全面移行とNetlifyでのホスティング環境構築により、
-							バグの頻発と複雑な状態管理の課題を解決し、安定したCI/CD環境を実現しました。
-						</p>
-						<div className="mb-6">
-							<h3 className="text-lg font-medium mb-3 text-black">
-								技術的な改善
-							</h3>
-							<ul className="space-y-2 text-sm text-gray-600">
-								<li>• EJS → Nuxt.jsへの全面移行</li>
-								<li>• FTP → GitHubによる自動デプロイ</li>
-								<li>• バグの大幅削減と安定性向上</li>
-								<li>• 保守性の大幅改善</li>
-							</ul>
-						</div>
-						<div className="flex flex-wrap gap-2 mb-4">
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Nuxt.js
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								JavaScript
-							</span>
-							<span className="px-3 py-1 bg-gray-50 text-zinc-700 rounded-full text-sm font-medium">
-								Netlify
-							</span>
-						</div>
-						<p className="text-sm text-gray-500 font-mono">
-							リプレイス・インフラ構築
-						</p>
-					</div>
+							{project.achievements.length > 0 && (
+								<section className="space-y-4 mb-6">
+									<h3 className="text-base font-semibold text-foreground">貢献・成果</h3>
+									<ul className="space-y-2 text-sm text-zinc-700">
+										{project.achievements.map((achievement) => (
+											<li key={achievement} className="flex items-start gap-2">
+												<span className="w-1.5 h-1.5 bg-zinc-400 rounded-full mt-2 flex-shrink-0"></span>
+												{achievement}
+											</li>
+										))}
+									</ul>
+								</section>
+							)}
+
+							<section className="space-y-3 mb-4">
+								<h4 className="text-sm font-medium text-foreground">使用技術</h4>
+								<div className="flex flex-wrap gap-2">
+									{project.tech.map((tech) => (
+										<span key={tech} className="px-3 py-1 bg-zinc-50 text-zinc-700 rounded-full text-xs font-medium border border-zinc-200/60">
+											{tech}
+										</span>
+									))}
+								</div>
+							</section>
+
+							<p className="text-xs text-zinc-500 font-mono bg-zinc-50 px-3 py-2 rounded-lg">
+								{project.phases}
+							</p>
+						</article>
+					))}
 				</div>
 
-				{/* Back to Home */}
 				<div className="mt-16 text-center">
 					<Link
 						href="/"
-						className="text-gray-600 hover:text-gray-900 transition-colors font-medium underline"
+						className="text-zinc-600 hover:text-zinc-900 font-medium hover:underline transition-colors"
 					>
 						← ホームに戻る
 					</Link>
