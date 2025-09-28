@@ -1,15 +1,14 @@
 import { MDXContent } from "@content-collections/mdx/react";
 import { allPersonalProjects } from "content-collections";
-import parse from "html-react-parser";
 import { ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import Callout from "@/components/Callout";
 
 interface PersonalProjectPageProps {
-	params: {
+	params: Promise<{
 		slug: string;
-	};
+	}>;
 }
 
 export async function generateStaticParams() {
@@ -18,10 +17,11 @@ export async function generateStaticParams() {
 	}));
 }
 
-export default function PersonalProjectPage({
+export default async function PersonalProjectPage({
 	params,
 }: PersonalProjectPageProps) {
-	const project = allPersonalProjects.find((p) => p.slug === params.slug);
+	const { slug } = await params;
+	const project = allPersonalProjects.find((p) => p.slug === slug);
 
 	if (!project) {
 		notFound();
