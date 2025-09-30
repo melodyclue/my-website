@@ -10,6 +10,11 @@ updatedAt: "2025-09-29"
 featured: true
 ---
 
+<Callout type="info">
+Googleログインの他に、ちょっと試してみたい方向けに、<a target="_blank" href="https://notewind.run/login/anonymous">匿名ログイン</a>を用意しています。
+</Callout>
+
+
 ### 概要
 
 Notewindは、開発者やスタートアップが製品の変更履歴やアップデート情報を簡単に公開できるプロダクト更新共有ツールです。
